@@ -1,0 +1,148 @@
+.font_style_title {
+  font-family: "Poppins" !important;
+  font-size: 3rem !important;
+  font-weight: 500 !important;
+}
+
+.font_style_content {
+  font-size: 1 rem !important;
+  font-weight: 50 !important;
+  line-height: 1.3 !important;
+  font-family: "Poppins" !important;
+  color: #ffff;
+}
+
+.card_text_style {
+  font-weight: 600 !important;
+  line-height: 1.4 !important;
+  unicode-bidi: isolate !important;
+  font-size: x-small !important;
+}
+
+.card_title_style {
+  font-family: "Poppins" !important;
+  font-weight: 500 !important;
+  font-size: 1.2rem !important;
+}
+
+.footer_text_style {
+  font-family: "Poppins" !important;
+  font-weight: 500 !important;
+  font-size: medium !important;
+  color: #ffff !important;
+  margin-bottom: 1rem;
+}
+
+.footer_text_style_p {
+  font-family: "Poppins" !important;
+  font-size: small !important;
+  color: #ffff !important;
+}
+
+.home-grid {
+  height: 100vh !important;
+}
+
+.sidebar_open {
+  transition: all 0.5s;
+  top: 0;
+  left: 0;
+  flex-shrink: 0;
+  font-family: "Poppins" !important;
+}
+
+.sidebar_close {
+  transition: all 0.5s;
+  top: 0;
+  left: 0;
+  flex-shrink: 0;
+}
+
+.sidebar_item_open {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 12px;
+  transition: all 1s;
+  font-size: 1.1rem;
+  color: black;
+}
+
+.sidebar_item_close {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.5s;
+  color: black;
+}
+
+.loading_text {
+  font-family: "Poppins" !important;
+  font-size: xx-large;
+}
+
+.forgot_text{
+  font-family: "Poppins" !important;
+  font-weight: 500 !important;
+  font-size: 1rem !important;
+}
+
+.forgot_text_2{
+  font-family: "Poppins" !important;
+  font-weight: 500 !important;
+  font-size: 1.1rem !important;
+}
+
+@media screen and (max-width: 600px) {
+  .card_3_media {
+    display: none;
+  }
+  .card_2_media {
+    margin-left: 2rem;
+  }
+  .font_style_title {
+    font-size: 2.5rem !important;
+  }
+}
+
+@media screen and (max-width: 700px) and (min-width: 600px) {
+  .card_3_media {
+    display: none;
+  }
+  .card_2_media {
+    margin-left: 3rem;
+  }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 900px) {
+  .card_3_media {
+    display: none;
+  }
+  .card_2_media {
+    margin-left: 2rem;
+  }
+  .font_style_title {
+    font-size: 2rem !important;
+  }
+}
+
+@media screen and (max-width: 900px) and (min-width: 700px) {
+  .card_3_media {
+    margin-left: 2rem;
+  }
+  .card_2_media {
+    margin-left: 2rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .sidebar_close {
+    width: 60px !important;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .sidebar_open {
+    width: 170px !important;
+  }
+}
