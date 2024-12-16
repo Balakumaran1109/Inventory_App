@@ -16,7 +16,7 @@ const HomeCard = () => {
     "Enables users to check for items that are out of stock, ensuring timely replenishment and preventing lost sales opportunities.";
   return (
     <>
-      <Box width={"100%"} height={"100%"} margin={"auto"} marginTop={1}>
+      <Box width={"100%"} height={"100%"} margin={"auto"} marginTop={3}>
         <Box width={"100%"} padding={1} margin={"auto"} className="home_title">
           <Typography
             sx={{

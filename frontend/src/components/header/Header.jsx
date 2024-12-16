@@ -45,12 +45,12 @@ const Header = () => {
 
   return (
     <>
-      <Box>
         <Box
           sx={{
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
+            marginRight: 2
           }}
         >
           <Box sx={{ display: "flex", gap: 1 }}>
@@ -62,14 +62,13 @@ const Header = () => {
             </Typography>
           </Box>
           <Box>
-            <Button onClick={() => logout()} variant="contained">
+            <Button onClick={() => logout()} variant="contained" style={{backgroundColor: "black"}}>
               Logout
             </Button>
           </Box>
         </Box>
 
         <hr />
-      </Box>
     </>
   );
 };

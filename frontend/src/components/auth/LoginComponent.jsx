@@ -74,7 +74,7 @@ const LoginComponent = () => {
         <Loader />
       ) : (
         <ThemeProvider theme={defaultTheme}>
-          <Grid container component="main">
+          <Grid container  >
             <CssBaseline />
             <Grid
               item
@@ -85,6 +85,7 @@ const LoginComponent = () => {
                 backgroundColor: "#002984",
                 backgroundSize: "cover",
                 backgroundPosition: "left",
+                paddingBottom: 9
               }}
             >
               <HomeCard />
