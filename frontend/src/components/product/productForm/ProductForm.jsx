@@ -82,6 +82,7 @@ const ProductForm = ({
                 placeholder="Product Price"
                 autoFocus
                 name="price"
+                type="number"
                 value={product?.price}
                 onChange={handleInputChange}
               />
@@ -95,6 +96,7 @@ const ProductForm = ({
                 placeholder="Product Quantity"
                 autoFocus
                 name="quantity"
+                type="number"
                 value={product?.quantity}
                 onChange={handleInputChange}
               />{" "}
