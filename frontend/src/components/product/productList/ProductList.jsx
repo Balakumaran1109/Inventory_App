@@ -25,6 +25,13 @@ import {
   selectSortFilter,
   SORT_PRODUCTS,
 } from "../../../redux/features/product/FilterSlice";
+import { confirmAlert } from "react-confirm-alert";
+import "react-confirm-alert/src/react-confirm-alert.css";
+import {
+  deleteProduct,
+  getProducts,
+} from "../../../redux/features/product/ProductSlice";
+import { Link } from "react-router-dom";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -53,6 +60,28 @@ export default function CustomizedTables({ products, isLoading }) {
       return shortenedText;
     }
     return text;
+  };
+
+  const delProduct = async (id) => {
+    await dispatch(deleteProduct(id));
+    await dispatch(getProducts());
+  };
+
+  const confirmDelete = (id) => {
+    confirmAlert({
+      title: "Delete Product",
+      message: "Are you sure you want to delete this product ?",
+      buttons: [
+        {
+          label: "Delete",
+          onClick: () => delProduct(id),
+        },
+        {
+          label: "Cancel",
+          // onClick: () => alert('Click No')
+        },
+      ],
+    });
   };
 
   const [searchValue, setSearchValue] = useState("");
@@ -128,7 +157,7 @@ export default function CustomizedTables({ products, isLoading }) {
     <>
       <Box>
         <Box width={"100%"} padding={1} margin={"auto"}>
-          <Typography
+          {/* <Typography
             color={"black"}
             variant="h5"
             textAlign={"center"}
@@ -136,7 +165,7 @@ export default function CustomizedTables({ products, isLoading }) {
             marginBottom={2}
           >
             Inventory Items
-          </Typography>
+          </Typography> */}
         </Box>
 
         <Box
@@ -147,7 +176,7 @@ export default function CustomizedTables({ products, isLoading }) {
             justifyContent: "space-between",
             width: "90%",
             margin: "auto",
-            paddingTop: 6,
+            // paddingTop: 6,
             paddingRight: 5,
             alignItems: "center",
           }}
@@ -225,14 +254,25 @@ export default function CustomizedTables({ products, isLoading }) {
                             sx={{
                               display: "flex",
                               flexDirection: "row",
-                              justifyContent: "space-evenly",
+                              justifyContent: "space-around",
                             }}
                           >
-                            <GrView size={25} />
+                            <Link to={`/product-detail/${product._id}`}>
+                              <GrView size={25} color="black" />
+                            </Link>
 
-                            <FaEdit size={25} />
+                            <Link to={`/edit-product/${product._id}`}>
+                              {" "}
+                              <FaEdit size={25} color="black" />
+                            </Link>
 
-                            <RiDeleteBin2Fill size={25} />
+                            <Box sx={{ cursor: "pointer" }}>
+                              <RiDeleteBin2Fill
+                                size={25}
+                                color="black"
+                                onClick={() => confirmDelete(product._id)}
+                              />
+                            </Box>
                           </Box>
                         </StyledTableCell>
                       </StyledTableRow>

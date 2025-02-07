@@ -41,7 +41,7 @@ export default function SelectSmall({ handleCategoryValue }) {
             className="loading_text"
             marginBottom={2}
           >
-            Category :
+            Category:
           </Typography>
         </Box>
         <Box>

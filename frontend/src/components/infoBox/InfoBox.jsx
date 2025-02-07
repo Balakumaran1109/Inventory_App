@@ -28,14 +28,15 @@ const InfoBox = ({ bgColor, title, count, icon }) => {
           display: "flex",
           flexDirection: "column",
           gap: 2,
+           
         }}
       >
         <Typography component={"p"} variant="p" sx={{ fontFamily: "Poppins" }}>
           {title}
         </Typography>
-          <Typography component={"h4"} variant="h4" >
-            {count}
-          </Typography>
+        <Typography component={"h4"} variant="h4">
+          {count}
+        </Typography>
       </Box>
     </Box>
   );

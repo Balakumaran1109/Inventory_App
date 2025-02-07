@@ -13,13 +13,14 @@ const ProductForm = ({
   handleInputChange,
   handleImageChange,
   saveProduct,
+  title,
 }) => {
   const isLoading = useSelector(selectIsLoading);
 
   return (
     <>
       <Box sx={{ marginBottom: 5, display: "flex", justifyContent: "center" }}>
-        <Card sx={{ width: "95%", padding: 1, border: 1, margin: 2 }}>
+        <Card sx={{ width: "90%", padding: 1, border: 1, margin: 2 }}>
           <Box component="form" onSubmit={saveProduct}>
             <Box padding={1} marginTop={1}>
               <Typography
@@ -27,10 +28,13 @@ const ProductForm = ({
                 textAlign={"center"}
                 className="card_title_style"
               >
-                Please fill the below details to create a new product
+                {" "}
+                {title
+                  ? title
+                  : "Please fill the below details to create a new product"}
               </Typography>
             </Box>
-            <Card sx={{ margin: 2, padding: 2, border: 1 }}>
+            <Card sx={{ margin: 2, padding: 5, border: 1 }}>
               <label className="image_text">Product Image :</label>
               <code>Supported Formats: jpg, jpeg, png</code>
               <input
@@ -47,7 +51,7 @@ const ProductForm = ({
                 <p className="forgot_text">No image set for this product</p>
               )}
             </Card>
-            <Card sx={{ margin: 2, padding: 2, border: 1 }}>
+            <Card sx={{ margin: 2, padding: 5, border: 1 }}>
               <label className="forgot_text">Product Name :</label>
               <TextField
                 margin="normal"
@@ -129,7 +133,7 @@ const ProductForm = ({
                     style={{ color: "grey" }}
                     disabled
                   >
-                    Saving...
+                    {title ? "Updating..." : "Saving..."}
                   </Button>
                 ) : (
                   <Button
@@ -137,7 +141,7 @@ const ProductForm = ({
                     variant="contained"
                     style={{ backgroundColor: "black" }}
                   >
-                    Save Product
+                    {title ? "Update Product" : "Save Product"}
                   </Button>
                 )}
               </Box>

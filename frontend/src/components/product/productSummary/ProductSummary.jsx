@@ -46,7 +46,7 @@ const ProductSummary = ({ products }) => {
 
   return (
     <Box component={"div"} sx={{ width: "100%" }}>
-      <Typography>Inventory Stats</Typography>
+      {/* <Typography sx={{textAlign: "center"}} variant="h5">Inventory Stats</Typography> */}
       <Box
         component={"div"}
         sx={{

@@ -31,7 +31,7 @@ const Sidebar = ({ children }) => {
           {isLoading ? (
             <Loader />
           ) : (
-            <Box display={"flex"}>
+            <Box display={"flex"} >
               <Box
                 className={isOpen ? "sidebar_open" : "sidebar_close"}
                 position={"fixed"}
@@ -76,7 +76,7 @@ const Sidebar = ({ children }) => {
               <Box
                 component={"main"}
                 width={"100%"}
-                paddingLeft={isOpen ? 27 : 10}
+                paddingLeft={isOpen ? 25 : 10}
                 style={{ transition: "all .5s" }}
               >
                 {children}

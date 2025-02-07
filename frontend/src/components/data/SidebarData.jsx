@@ -16,20 +16,10 @@ const menu = [
     path: "/add-product",
   },
   {
-    title: "Account",
+    title: "My Profile",
     icon: <MdAccountBox size={25}/>,
-    children: [
-      {
-        title: "Profile",
-        icon: <MdAccountBox size={25}/>,
-        path: "/profile",
-      },
-      {
-        title: "Edit Profile",
-        icon: <MdAccountBox size={25}/>,
-        path: "/addProfile",
-      },
-    ],
+    path: "/profile"
+    
   },
   {
     title: "Report Bug",

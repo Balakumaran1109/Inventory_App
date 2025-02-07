@@ -18,7 +18,6 @@ const AddProduct = () => {
   const [productImage, setProductImage] = useState("");
   const [imagePreview, setImagePreview] = useState(null);
 
-  const isLoading = useSelector(selectIsLoading);
 
   const navigate = useNavigate();
 
