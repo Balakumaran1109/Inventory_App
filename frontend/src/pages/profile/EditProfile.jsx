@@ -19,7 +19,7 @@ const EditProfile = () => {
 
   const initialState = {
     name: user?.name,
-    email: user?.email,
+    email: user?.email, 
     phone: user?.phone,
     bio: user?.bio,
     photo: user?.photo,
