@@ -1,7 +1,10 @@
-h1, h2, h3, h4, h5{
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-family: "Poppins" !important;
 }
-
 
 .font_style_title {
   font-family: "Poppins" !important;
@@ -108,7 +111,8 @@ h1, h2, h3, h4, h5{
   overflow: hidden;
   transition: all 0.3s;
 }
-.image-preview img, .product_img {
+.image-preview img,
+.product_img {
   width: 100%;
   height: 280px;
 }
@@ -154,6 +158,21 @@ h1, h2, h3, h4, h5{
     transform: translateY(-5px);
   }
 }
+
+.user_details,
+.products_details {
+  font-family: "Poppins" !important;
+}
+
+.user_image {
+  width: 400px;
+  display: flex;
+  align-self: center;
+  margin-bottom: 100px;
+}
+
+
+
 
 @media screen and (max-width: 600px) {
   .card_3_media {

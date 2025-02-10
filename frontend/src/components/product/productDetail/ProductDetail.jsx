@@ -45,7 +45,7 @@ const ProductDetail = () => {
     if (isError) {
       console.log(message);
     }
-  }, [isLoggedIn, isError, message, dispatch]);
+  }, [isLoggedIn, message, dispatch]);
 
   return (
     <>
@@ -80,9 +80,10 @@ const ProductDetail = () => {
                     borderColor: "grey.500",
                     display: "flex",
                     flexDirection: "column",
-                      justifyContent: "center",
-                      alignItems: "center",
+                    justifyContent: "center",
+                    alignItems: "center",
                   }}
+                  
                 >
                   <Box
                     sx={{
@@ -104,7 +105,7 @@ const ProductDetail = () => {
                       <p>No image set for this Product</p>
                     )}
                   </Box>
-                  <Typography variant="h5" sx={{ marginBottom: 3,  }}>
+                  <Typography variant="h5" sx={{ marginBottom: 3 }}>
                     Product Availability: {stockCheck(product?.quantity)}
                   </Typography>
                 </Card>
@@ -122,6 +123,7 @@ const ProductDetail = () => {
                     border: 1,
                     borderColor: "grey.500",
                   }}
+                  className="products_details"
                 >
                   <Typography variant="h6">
                     <b>Name :</b> &nbsp;

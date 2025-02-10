@@ -32,13 +32,15 @@ const AuthSlice = createSlice({
     },
 
     SET_USER(state, action) {
-      const profile = action.payload;
+      const profile = action.payload;     
       state.user.name = profile.name;
       state.user.email = profile.email;
       state.user.phone = profile.phone;
       state.user.bio = profile.bio;
       state.user.photo = profile.photo;
     },
+    
+    
   },
 });
 
@@ -50,5 +52,7 @@ export const selectIsLoggedIn = (state) => state.auth.isLoggedIn;
 export const logoutLoadingStatus = (state) => state.auth.logoutLoading;
 export const selectName = (state) => state.auth.name;
 export const selectUser = (state) => state.auth.user;
+
+
 
 export default AuthSlice.reducer;

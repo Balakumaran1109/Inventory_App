@@ -30,7 +30,7 @@ const getProduct = async (id) => {
   return response.data;
 };
 
-// Update Product
+// Update a Product
 const updateProduct = async (id, formData) => {
   const response = await axios.patch(`api/products/${id}`, formData);
 
