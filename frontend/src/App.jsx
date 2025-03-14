@@ -18,6 +18,8 @@ import ProductDetail from "./components/product/productDetail/ProductDetail";
 import EditProduct from "./pages/editProduct/editProduct";
 import Profile from "./pages/profile/Profile";
 import EditProfile from "./pages/profile/EditProfile";
+import Contact from "./pages/contact/Contact";
+import ChangePassword from "./pages/changePassword/ChangePassword";
 
 axios.defaults.withCredentials = true;
 
@@ -102,6 +104,28 @@ function App() {
             <Sidebar>
               <Layout>
                 <EditProfile />
+              </Layout>
+            </Sidebar>
+          }
+        />
+
+        <Route
+          path="/contact-us"
+          element={
+            <Sidebar>
+              <Layout>
+                <Contact />
+              </Layout>
+            </Sidebar>
+          }
+        />
+
+        <Route
+          path="/change-password"
+          element={
+            <Sidebar>
+              <Layout>
+                <ChangePassword />
               </Layout>
             </Sidebar>
           }

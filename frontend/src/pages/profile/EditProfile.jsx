@@ -4,6 +4,8 @@ import { selectUser } from "../../redux/features/auth/AuthSlice";
 import { Box } from "@mui/system";
 import { Button, Card, TextField, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import { updateUser } from "../../services/AuthService";
 
 const EditProfile = () => {
   const navigate = useNavigate();
@@ -19,7 +21,7 @@ const EditProfile = () => {
 
   const initialState = {
     name: user?.name,
-    email: user?.email, 
+    email: user?.email,
     phone: user?.phone,
     bio: user?.bio,
     photo: user?.photo,
@@ -39,11 +41,52 @@ const EditProfile = () => {
     setImagePreview(URL.createObjectURL(e.target.files[0]));
   };
 
-  const saveProfile = (e) => {
+  const saveProfile = async (e) => {
     e.preventDefault();
-  };
+    setIsLoading(true);
 
-  //   useEffect(() => {}, [profile, user]);
+    try {
+      // Handle Image upload
+      let imageUrl;
+      if (
+        profileImg &&
+        (profileImg.type === "image/jpeg" ||
+          profileImg.type === "image/jpg" ||
+          profileImg.type === "image/png")
+      ) {
+        const image = new FormData();
+        image.append("file", profileImg);
+        image.append("cloud_name", "balakumaran1109");
+        image.append("upload_preset", "inventory_app_user_image");
+
+        // Save image to cloudinary
+        const response = await fetch(
+          "https://api.cloudinary.com/v1_1/balakumaran1109/image/upload",
+          { method: "post", body: image }
+        );
+        const imgData = await response.json();
+        imageUrl = imgData.url.toString();
+      }
+
+      // Save Profile
+      const formData = {
+        name: profile.name,
+        phone: profile.phone,
+        bio: profile.bio,
+        photo: profileImg ? imageUrl : profile.photo,
+      };
+
+      const data = await updateUser(formData);
+      console.log(data);
+      toast.success("Profile Updated Successfully")
+      navigate("/profile")
+      setIsLoading(false);
+
+    } catch (error) {
+      setIsLoading(false);
+      toast.error(error.message);
+    }
+  };
 
   return (
     <>
@@ -66,8 +109,14 @@ const EditProfile = () => {
                 border: 1,
                 display: "flex",
                 flexDirection: "column-reverse",
+                textAlign: "center",
               }}
             >
+              {" "}
+              <Box sx={{ marginTop: 1, marginLeft: 5 }}>
+                {" "}
+                <code>Supported Formats: jpg, jpeg, png</code>
+              </Box>
               <Box
                 sx={{
                   display: "flex",
@@ -107,7 +156,7 @@ const EditProfile = () => {
                 name="name"
                 type="text"
                 value={profile?.name}
-                onChange={(e) => handleInputChange()}
+                onChange={handleInputChange}
               />{" "}
               <br></br>
               <br></br>
@@ -134,7 +183,7 @@ const EditProfile = () => {
                 name="phone"
                 // type="number"
                 value={profile?.phone}
-                onChange={(e) => handleInputChange()}
+                onChange={handleInputChange}
               />
               <br></br>
               <br></br>
@@ -148,7 +197,7 @@ const EditProfile = () => {
                 name="bio"
                 type="text"
                 value={profile?.bio}
-                onChange={(e) => handleInputChange()}
+                onChange={handleInputChange}
               />{" "}
               <br></br>
               <br></br>

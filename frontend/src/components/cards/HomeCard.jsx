@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import React from "react";
 import CardItem from "./CardItem";
 import inv_img_1 from "../../assets/inventory_App.jpg";
@@ -16,20 +16,43 @@ const HomeCard = () => {
     "Enables users to check for items that are out of stock, ensuring timely replenishment and preventing lost sales opportunities.";
   return (
     <>
-      <Box width={"100%"} height={"100%"} margin={"auto"} marginTop={3}>
-        <Box width={"100%"} padding={1} margin={"auto"} className="home_title">
+      <Grid
+        container
+        width={"100%"}
+        height={"100%"}
+        margin={"auto"}
+        marginTop={3}
+      >
+        <Grid
+          item
+          sm={6}
+          xs={12}
+          md={12}
+          width={"100%"}
+          padding={1}
+          margin={"auto"}
+        >
           <Typography
             sx={{
               color: "#ffffff",
+              textAlign: "center",
+              fontFamily: "Poppins",
             }}
             variant="h1"
-            textAlign={"center"}
             className="font_style_title"
           >
             Inventory & Stock Management Solution
           </Typography>
-        </Box>
-        <Box width={"90%"} padding={1} margin={"auto"}>
+        </Grid>
+        <Grid
+          item
+          width={"90%"}
+          sm={6}
+          xs={6}
+          md={12}
+          padding={1}
+          margin={"auto"}
+        >
           <Typography
             className="font_style_content"
             sx={{
@@ -42,8 +65,9 @@ const HomeCard = () => {
             Inventory system to control and manage products in the warehouse in
             real time and integrated to make it easier to develop your business.
           </Typography>
-        </Box>
-        <Box
+        </Grid>
+        <Grid
+          item
           margin={"auto"}
           marginTop={3}
           display={"flex"}
@@ -51,6 +75,9 @@ const HomeCard = () => {
           justifyContent={"center"}
           flexWrap={"wrap"}
           alignItems={"center"}
+          sm={12}
+          md={12}
+          xs={6}
         >
           <Box>
             <CardItem
@@ -73,8 +100,9 @@ const HomeCard = () => {
               title={"Out of Stock Alerts"}
             />
           </Box>
-        </Box>
-        <Box
+        </Grid>
+        <Grid
+          item
           margin={"auto"}
           marginTop={5}
           display={"flex"}
@@ -82,10 +110,13 @@ const HomeCard = () => {
           justifyContent={"center"}
           flexWrap={"wrap"}
           alignItems={"center"}
+          sm={12}
+          md={12}
+          xs={6}
         >
           <Footer />
-        </Box>
-      </Box>
+        </Grid>
+      </Grid>
     </>
   );
 };

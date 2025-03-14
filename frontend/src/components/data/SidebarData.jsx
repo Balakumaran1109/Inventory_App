@@ -22,7 +22,7 @@ const menu = [
     
   },
   {
-    title: "Report Bug",
+    title: "Help Desk",
     icon: <TbMessageReport size={25}/>,
     path: "/contact-us",
   },

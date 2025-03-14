@@ -139,7 +139,7 @@ const Profile = () => {
                   </Button>
                 </Link>
 
-                <Link to="change-password">
+                <Link to="/change-password">
                   <Button variant="contained" sx={{ bgcolor: "#1b5e20" }}>
                     Change Password
                   </Button>

@@ -121,3 +121,48 @@ export const getUser = async () => {
     toast.error(message);
   }
 };
+
+// Update Profile
+export const updateUser = async (formData) => {
+  try {
+    const response = await axios.patch(`/api/users/updateuser`, formData);
+
+    return response.data;
+  } catch (error) {
+    const message =
+      (error.response && error.response.data && error.response.data.message) ||
+      error.message ||
+      error.toString();
+    toast.error(message);
+  }
+};
+
+// Change Password
+export const changePassword = async (formData) => {
+  try {
+    const response = await axios.patch(`/api/users/changepassword`, formData);
+
+    return response.data;
+  } catch (error) {
+    const message =
+      (error.response && error.response.data && error.response.data.message) ||
+      error.message ||
+      error.toString();
+    toast.error(message);
+  }
+};
+
+// Contact us
+export const contactUs = async (formData) => {
+  try {
+    const response = await axios.post(`/api/contactus`, formData);
+
+    return response.data;
+  } catch (error) {
+    const message =
+      (error.response && error.response.data && error.response.data.message) ||
+      error.message ||
+      error.toString();
+    toast.error(message);
+  }
+};

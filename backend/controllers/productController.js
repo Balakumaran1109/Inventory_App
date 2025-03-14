@@ -16,7 +16,7 @@ const createProduct = asyncHandler(async (req, res) => {
   // Configuration
   const cloudinarySecret = process.env.CLOUDINARY_SECRET;
   cloudinary.config({
-    cloud_name: "da4whh3qy",
+    cloud_name: "balakumaran1109",
     api_key: "321769777279557",
     api_secret: cloudinarySecret,
   });
@@ -124,7 +124,7 @@ const updateProduct = asyncHandler(async (req, res) => {
   // Configuration
   const cloudinarySecret = process.env.CLOUDINARY_SECRET;
   cloudinary.config({
-    cloud_name: "da4whh3qy",
+    cloud_name: "balakumaran1109",
     api_key: "321769777279557",
     api_secret: cloudinarySecret,
   });

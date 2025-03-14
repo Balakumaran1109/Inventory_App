@@ -34,7 +34,15 @@ const ProductForm = ({
                   : "Please fill the below details to create a new product"}
               </Typography>
             </Box>
-            <Card sx={{ margin: 2, padding: 5, border: 1 }}>
+            <Card sx={{ margin: 2, padding: 3, border: 1 }}>
+
+            {imagePreview != null ? (
+                <Box sx={{marginBottom: 5, display: "flex", justifyContent: "center"}} className="image-preview">
+                  <img src={imagePreview} alt="product"></img>
+                </Box>
+              ) : (
+                <p className="forgot_text">No image set for this product</p>
+              )}
               <label className="image_text">Product Image :</label>
               <code>Supported Formats: jpg, jpeg, png</code>
               <input
@@ -43,13 +51,7 @@ const ProductForm = ({
                 name="image"
                 onChange={(e) => handleImageChange(e)}
               />
-              {imagePreview != null ? (
-                <div className="image-preview">
-                  <img src={imagePreview} alt="product"></img>
-                </div>
-              ) : (
-                <p className="forgot_text">No image set for this product</p>
-              )}
+              
             </Card>
             <Card sx={{ margin: 2, padding: 5, border: 1 }}>
               <label className="forgot_text">Product Name :</label>

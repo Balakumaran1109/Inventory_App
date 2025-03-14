@@ -212,7 +212,7 @@ export default function CustomizedTables({ products, isLoading }) {
               <Table sx={{ minWidth: 700 }} aria-label="customized table">
                 <TableHead>
                   <TableRow>
-                    <StyledTableCell align="left">S/N</StyledTableCell>
+                    <StyledTableCell align="center">S/N</StyledTableCell>
                     <StyledTableCell align="center">
                       Product Name
                     </StyledTableCell>
@@ -230,7 +230,7 @@ export default function CustomizedTables({ products, isLoading }) {
                         <StyledTableCell
                           component="th"
                           scope="row"
-                          align="left"
+                          align="center"
                         >
                           {index + 1}
                         </StyledTableCell>
@@ -285,26 +285,64 @@ export default function CustomizedTables({ products, isLoading }) {
       </Box>
 
       <nav>
-        <ul>
-          <li>
-            <a href="#" onClick={prevPage}>
-              Prev
-            </a>
-          </li>
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            marginTop: 3,
+            gap: 4,
+          }}
+        >
+          <Button
+            disabled={currentPage === 1}
+            sx={{
+              border: 1,
+              color: "black",
+              ":hover": {
+                bgcolor: "black",
+                color: "white",
+              },
+            }}
+            onClick={prevPage}
+          >
+            Prev
+          </Button>
 
           {numbers.map((num, index) => (
-            <li key={index}>
-              <a href="#" onClick={() => changePage(num)}>
-                {num}
-              </a>
-            </li>
+            <Button
+              sx={{
+                border: 1,
+                bgcolor: currentPage == num ? "black" : "white",
+                color: currentPage == num ? "white" : "black",
+                ":hover": {
+                  bgcolor: "black",
+                  color: "white",
+                },
+              }}
+              key={index}
+              onClick={() => changePage(num)}
+            >
+              {" "}
+              {num}
+            </Button>
           ))}
-          <li>
-            <a href="#" onClick={nextPage}>
-              Next
-            </a>
-          </li>
-        </ul>
+
+          <Button
+            disabled={currentPage >= npage || filteredData.length < 6}
+            sx={{
+              border: 1,
+              color: "black",
+              ":hover": {
+                bgcolor: "black",
+                color: "white",
+              },
+            }}
+            onClick={nextPage}
+          >
+            Next
+          </Button>
+        </Box>
       </nav>
     </>
   );
