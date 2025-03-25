@@ -1,17 +1,16 @@
 # Inventory Management System
 
-##  Overview
 The **Inventory Management System** is a web-based application that helps businesses efficiently track, manage, and optimize their inventory. With real-time monitoring, automated stock updates, and insightful analytics, this system streamlines inventory operations and prevents stock shortages or overstocking.
 
 ##  Features
 -  **Real-time Stock Tracking** – Monitor inventory levels in real-time.
--  **Automated Stock Updates** – Updates stock levels dynamically with transactions.
+-  **Automated Stock Updates** – Updates stock levels dynamically.
 -  **Product Management** – Add, edit, and remove products easily.
 -  **Category & Supplier Management** – Organize inventory based on categories and suppliers.
 -  **Analytics & Reports** – Generate insightful reports for better decision-making.
 -  **User Roles & Authentication** – Secure login and role-based access.
 
-## 🛠 Tech Stack
+##  Tech Stack
 - **Frontend**: React.js, Material-UI, Bootstrap
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB
