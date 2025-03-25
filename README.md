@@ -20,7 +20,7 @@ The **Inventory Management System** is a web-based application that helps busine
 ##  Installation & Setup
 1. **Clone the Repository**
    ```sh
-   git clone https://github.com/YOUR_GITHUB_USERNAME/inventory-management.git
+   git clone https://github.com/Balakumaran1109/Inventory_App.git
    cd inventory-management
    ```
 2. **Install Dependencies**
