@@ -1,24 +1,24 @@
-# 📦 Inventory Management System
+# Inventory Management System
 
-## 📝 Overview
+##  Overview
 The **Inventory Management System** is a web-based application that helps businesses efficiently track, manage, and optimize their inventory. With real-time monitoring, automated stock updates, and insightful analytics, this system streamlines inventory operations and prevents stock shortages or overstocking.
 
 ##  Features
-- 📊 **Real-time Stock Tracking** – Monitor inventory levels in real-time.
-- 🔄 **Automated Stock Updates** – Updates stock levels dynamically with transactions.
-- 📦 **Product Management** – Add, edit, and remove products easily.
-- 📜 **Category & Supplier Management** – Organize inventory based on categories and suppliers.
-- 📈 **Analytics & Reports** – Generate insightful reports for better decision-making.
-- 👥 **User Roles & Authentication** – Secure login and role-based access.
+-  **Real-time Stock Tracking** – Monitor inventory levels in real-time.
+-  **Automated Stock Updates** – Updates stock levels dynamically with transactions.
+-  **Product Management** – Add, edit, and remove products easily.
+-  **Category & Supplier Management** – Organize inventory based on categories and suppliers.
+-  **Analytics & Reports** – Generate insightful reports for better decision-making.
+-  **User Roles & Authentication** – Secure login and role-based access.
 
-## 🛠️ Tech Stack
+## 🛠 Tech Stack
 - **Frontend**: React.js, Material-UI, Bootstrap
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB
 - **Authentication**: JWT (JSON Web Token)
 - **State Management**: Context API / Redux (if applicable)
 
-## 📌 Installation & Setup
+##  Installation & Setup
 1. **Clone the Repository**
    ```sh
    git clone https://github.com/YOUR_GITHUB_USERNAME/inventory-management.git
@@ -41,7 +41,7 @@ The **Inventory Management System** is a web-based application that helps busine
    npm run dev
    ```
 
-## 🎯 Usage
+##  Usage
 1. **Login/Register** as an admin or user.
 2. **Add & Manage Products** by creating categories, adding suppliers, and tracking stock.
 3. **Monitor Inventory Levels** with the dashboard and analytics.
@@ -49,12 +49,12 @@ The **Inventory Management System** is a web-based application that helps busine
 
 
 
-## 📫 Contact
+##  Contact
 For any queries, feel free to reach out:
 - **LinkedIn**: [Your Profile](https://www.linkedin.com/in/YOUR_PROFILE/)
 - **Portfolio**: [Your Portfolio](https://YOUR_PORTFOLIO_LINK/)
 
 ---
 
-✨ *Contributions are welcome! Feel free to fork and improve.* 🚀
+ *Contributions are welcome! Feel free to fork and improve.* 
 
