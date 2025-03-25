@@ -15,7 +15,7 @@ The **Inventory Management System** is a web-based application that helps busine
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB
 - **Authentication**: JWT (JSON Web Token)
-- **State Management**: Context API / Redux (if applicable)
+- **State Management**:Redux
 
 ##  Installation & Setup
 1. **Clone the Repository**
