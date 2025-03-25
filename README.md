@@ -46,14 +46,7 @@ The **Inventory Management System** is a web-based application that helps busine
 3. **Monitor Inventory Levels** with the dashboard and analytics.
 4. **Generate Reports** for better stock management.
 
+## Contributing
+I welcome contributions to Inventory Management App! Feel free to submit bug reports, feature requests, or pull requests on our GitHub repository.
 
-
-##  Contact
-For any queries, feel free to reach out:
-- **LinkedIn**: [Your Profile](https://www.linkedin.com/in/YOUR_PROFILE/)
-- **Portfolio**: [Your Portfolio](https://YOUR_PORTFOLIO_LINK/)
-
----
-
- *Contributions are welcome! Feel free to fork and improve.* 
 
