@@ -6,7 +6,7 @@ import { store } from "./redux/Store.jsx";
 import { Provider } from "react-redux";
 import axios from "axios";
 
-const superBaseUrl = import.meta.env.VITE_SUPABASE_URL;
+const superBaseUrl = "https://inventory-app-api-a21q.onrender.com";
 
 axios.defaults.baseURL = superBaseUrl;
 
