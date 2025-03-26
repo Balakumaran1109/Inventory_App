@@ -6,7 +6,7 @@ import { store } from "./redux/Store.jsx";
 import { Provider } from "react-redux";
 import axios from "axios";
 
-axios.defaults.baseURL = "https://inventory-app-api-a21q.onrender.com";
+axios.defaults.baseURL = "https://inventory-app-backend-jdky.onrender.com";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <Provider store={store}>
