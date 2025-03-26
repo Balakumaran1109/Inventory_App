@@ -1,52 +1,47 @@
-# Inventory Management System
+# Inventory Management App (Frontend)
 
-The **Inventory Management System** is a web-based application that helps businesses efficiently track, manage, and optimize their inventory. With real-time monitoring, automated stock updates, and insightful analytics, this system streamlines inventory operations and prevents stock shortages or overstocking.
+The Inventory Management System is a web-based application that helps businesses efficiently track, manage, and optimize their inventory. With real-time monitoring, automated stock updates, and insightful analytics, this system streamlines inventory operations and prevents stock shortages or overstocking.
 
-##  Features
--  **Real-time Stock Tracking** – Monitor inventory levels in real-time.
--  **Automated Stock Updates** – Updates stock levels dynamically.
--  **Product Management** – Add, edit, and remove products easily.
--  **Category & Supplier Management** – Organize inventory based on categories and suppliers.
--  **Analytics & Reports** – Generate insightful reports for better decision-making.
--  **User Roles & Authentication** – Secure login and role-based access.
+## Features
+
+Comprehensive Product Management – Easily add, update, and remove products to keep your inventory organized.
+
+Real-Time Stock Tracking – Monitor inventory levels in real-time to prevent overstocking or stockouts.
+
+Advanced Search & Filtering – Quickly locate products using powerful search and filtering options.
+
+Detailed Reports & Insights – Generate insightful reports on stock levels, transactions, and inventory trends for better decision-making.
+
+
 
 ##  Tech Stack
-- **Frontend**: React.js, Material-UI, Bootstrap
-- **Backend**: Node.js, Express.js
-- **Database**: MongoDB
-- **Authentication**: JWT (JSON Web Token)
-- **State Management**:Redux
+- **Frontend**: React.js, React Router, Material-UI/Bootstrap
+- **State Management**: Redux 
+- **Backend**: Node.js, Express.js (Handled separately in the backend repository)
+- **Database**: MongoDB (via backend API)
 
-##  Installation & Setup
-1. **Clone the Repository**
+## 📦 Installation & Setup
+1. Clone the repository:
    ```sh
-   git clone https://github.com/Balakumaran1109/Inventory_App.git
-   cd inventory-management
+   git clone https://github.com/Balakumaran1109/Inventory_App_Frontend.git
    ```
-2. **Install Dependencies**
+2. Navigate to the project directory:
+   ```sh
+   cd frontend
+   ```
+3. Install dependencies:
    ```sh
    npm install
    ```
-3. **Setup Environment Variables**
-   - Create a `.env` file in the root directory and add required environment variables (e.g., Database URL, JWT Secret, etc.).
-4. **Run the Application**
+4. Start the development server:
    ```sh
    npm start
    ```
-5. **Backend Setup** (if separate repo)
-   ```sh
-   cd backend
-   npm install
-   npm run dev
-   ```
 
-##  Usage
-1. **Login/Register** as an admin or user.
-2. **Add & Manage Products** by creating categories, adding suppliers, and tracking stock.
-3. **Monitor Inventory Levels** with the dashboard and analytics.
-4. **Generate Reports** for better stock management.
 
-## Contributing
-I welcome contributions to Inventory Management App! Feel free to submit bug reports, feature requests, or pull requests on our GitHub repository.
+##  Contributing
+Contributions are welcome! Feel free to submit bug reports, feature requests, or pull requests on our GitHub repository.
 
+##  License
+This project is open-source and available under the MIT License.
 
