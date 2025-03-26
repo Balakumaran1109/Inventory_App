@@ -4,13 +4,13 @@ The Inventory Management System is a web-based application that helps businesses
 
 ## Features
 
-Comprehensive Product Management – Easily add, update, and remove products to keep your inventory organized.
+- **Comprehensive Product Management** – Easily add, update, and remove products to keep your inventory organized.
 
-Real-Time Stock Tracking – Monitor inventory levels in real-time to prevent overstocking or stockouts.
+- **Real-Time Stock Tracking** – Monitor inventory levels in real-time to prevent overstocking or stockouts.
 
-Advanced Search & Filtering – Quickly locate products using powerful search and filtering options.
+- **Advanced Search & Filtering** – Quickly locate products using powerful search and filtering options.
 
-Detailed Reports & Insights – Generate insightful reports on stock levels, transactions, and inventory trends for better decision-making.
+- **Detailed Reports & Insights** – Generate insightful reports on stock levels, transactions, and inventory trends for better decision-making.
 
 
 
@@ -20,7 +20,8 @@ Detailed Reports & Insights – Generate insightful reports on stock levels, tra
 - **Backend**: Node.js, Express.js (Handled separately in the backend repository)
 - **Database**: MongoDB (via backend API)
 
-## 📦 Installation & Setup
+
+##  Installation & Setup
 1. Clone the repository:
    ```sh
    git clone https://github.com/Balakumaran1109/Inventory_App_Frontend.git
@@ -44,4 +45,8 @@ Contributions are welcome! Feel free to submit bug reports, feature requests, or
 
 ##  License
 This project is open-source and available under the MIT License.
+
+🔗 Backend Repo
+
+The backend repository for this project can be found here [Backend Repo](https://github.com/Balakumaran1109/Inventory_App_Backend)
 
