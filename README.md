@@ -46,7 +46,7 @@ Contributions are welcome! Feel free to submit bug reports, feature requests, or
 ##  License
 This project is open-source and available under the MIT License.
 
-🔗 Backend Repo
+## Backend Repo
 
 The backend repository for this project can be found here [Backend Repo](https://github.com/Balakumaran1109/Inventory_App_Backend)
 
